@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.ScrollPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx" fx:id="borderPane"
+            fx:controller="MapController"
+            prefHeight="720.0" prefWidth="1280.0">
+    <top>
+        <VBox>
+            <MenuBar fx:id="menuBar">
+                <Menu text="File">
+                    <MenuItem text="New" onAction="#handleNew" />
+                    <MenuItem text="Open" onAction="#handleOpen" />
+                    <MenuItem text="Save" onAction="#handleSave" />
+                    <MenuItem text="Exit" onAction="#handleExit" />
+                </Menu>
+                <Menu text="Graph">
+                    <MenuItem text="Search Edge" onAction="#handleSearchEdge" />
+                    <MenuItem text="Search Vertex" onAction="#handleSearchVertex" />
+                    <MenuItem text="Shortest Path" onAction="#handleShortestPath" />
+                </Menu>
+            </MenuBar>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fx:id="scrollPane">
+            <Pane fx:id="pane" />
+        </ScrollPane>
+    </center>
+
+    <bottom>
+        <ToolBar>
+            <Label fx:id="statusLabel" />
+        </ToolBar>
+    </bottom>
+</BorderPane>

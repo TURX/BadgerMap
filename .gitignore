@@ -1,0 +1,11 @@
+.idea/
+*.iml
+out/
+old/
+*.class
+TestGraph/
+META-INF/
+javafx-sdk-11.0.2/
+BadgerMap.jar
+SampleTests.java
+SampleMain.java
